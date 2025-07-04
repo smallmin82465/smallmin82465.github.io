@@ -1,0 +1,257 @@
+/* Theme System */
+
+/* Dark Theme (Default) */
+body[data-theme="dark"] {
+    --primary-color: #00d4ff;
+    --secondary-color: #0099cc;
+    --accent-color: #ff6b6b;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --text-muted: #888888;
+    --bg-primary: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    --bg-secondary: rgba(255, 255, 255, 0.05);
+    --bg-card: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(0, 212, 255, 0.2);
+    --shadow-color: rgba(0, 212, 255, 0.2);
+    --overlay-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Light Theme */
+body[data-theme="light"] {
+    --primary-color: #0066cc;
+    --secondary-color: #004499;
+    --accent-color: #ff4757;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+    --bg-primary: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+    --bg-secondary: rgba(0, 0, 0, 0.05);
+    --bg-card: rgba(255, 255, 255, 0.8);
+    --border-color: rgba(0, 102, 204, 0.2);
+    --shadow-color: rgba(0, 102, 204, 0.2);
+    --overlay-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Light Theme Specific Styles */
+body[data-theme="light"] .particles .particle {
+    background: var(--primary-color);
+    opacity: 0.6;
+}
+
+body[data-theme="light"] .hero h1 {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--text-primary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+body[data-theme="light"] .company-logo {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+body[data-theme="light"] .experience-card,
+body[data-theme="light"] .skill-category,
+body[data-theme="light"] .contact-item {
+    background: var(--bg-card);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body[data-theme="light"] .experience-card:hover,
+body[data-theme="light"] .skill-category:hover,
+body[data-theme="light"] .contact-item:hover {
+    box-shadow: 0 8px 25px rgba(0, 102, 204, 0.15);
+}
+
+body[data-theme="light"] .tech-tag {
+    background: rgba(0, 102, 204, 0.1);
+    border: 1px solid rgba(0, 102, 204, 0.2);
+    color: var(--primary-color);
+}
+
+body[data-theme="light"] nav {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+body[data-theme="light"] nav.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+body[data-theme="light"] nav a {
+    color: var(--text-primary);
+}
+
+body[data-theme="light"] .theme-toggle,
+body[data-theme="light"] .lang-toggle {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+/* Theme Transition Effects */
+body {
+    transition: 
+        background 0.5s ease,
+        color 0.5s ease;
+}
+
+.experience-card,
+.skill-category,
+.contact-item,
+nav,
+.theme-toggle,
+.lang-toggle {
+    transition: 
+        background 0.5s ease,
+        color 0.5s ease,
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+/* Auto Theme (System Preference) */
+body[data-theme="auto"] {
+    --primary-color: #00d4ff;
+    --secondary-color: #0099cc;
+    --accent-color: #ff6b6b;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --text-muted: #888888;
+    --bg-primary: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    --bg-secondary: rgba(255, 255, 255, 0.05);
+    --bg-card: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(0, 212, 255, 0.2);
+    --shadow-color: rgba(0, 212, 255, 0.2);
+    --overlay-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (prefers-color-scheme: light) {
+    body[data-theme="auto"] {
+        --primary-color: #0066cc;
+        --secondary-color: #004499;
+        --accent-color: #ff4757;
+        --text-primary: #333333;
+        --text-secondary: #666666;
+        --text-muted: #999999;
+        --bg-primary: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+        --bg-secondary: rgba(0, 0, 0, 0.05);
+        --bg-card: rgba(255, 255, 255, 0.8);
+        --border-color: rgba(0, 102, 204, 0.2);
+        --shadow-color: rgba(0, 102, 204, 0.2);
+        --overlay-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+/* Theme Toggle Button States */
+.theme-toggle .theme-icon {
+    transition: transform 0.3s ease;
+}
+
+body[data-theme="light"] .theme-toggle .theme-icon {
+    transform: rotate(180deg);
+}
+
+/* Scrollbar Theme Support */
+body[data-theme="light"] ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body[data-theme="light"] ::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+/* Selection Colors */
+body[data-theme="dark"] ::selection {
+    background: rgba(0, 212, 255, 0.3);
+    color: #ffffff;
+}
+
+body[data-theme="light"] ::selection {
+    background: rgba(0, 102, 204, 0.3);
+    color: #333333;
+}
+
+/* Focus Outline Theme Support */
+body[data-theme="light"] button:focus,
+body[data-theme="light"] a:focus {
+    outline-color: var(--primary-color);
+}
+
+/* Theme-specific Animations */
+body[data-theme="light"] .glitch::before {
+    color: var(--accent-color);
+}
+
+body[data-theme="light"] .glitch::after {
+    color: var(--secondary-color);
+}
+
+/* High Contrast Theme Support */
+@media (prefers-contrast: high) {
+    body[data-theme="dark"] {
+        --primary-color: #ffffff;
+        --secondary-color: #ffffff;
+        --text-primary: #ffffff;
+        --text-secondary: #ffffff;
+        --border-color: #ffffff;
+        --bg-primary: #000000;
+        --bg-card: #000000;
+    }
+    
+    body[data-theme="light"] {
+        --primary-color: #000000;
+        --secondary-color: #000000;
+        --text-primary: #000000;
+        --text-secondary: #000000;
+        --border-color: #000000;
+        --bg-primary: #ffffff;
+        --bg-card: #ffffff;
+    }
+}
+
+/* Color Blind Friendly Adjustments */
+@media (prefers-reduced-motion: no-preference) {
+    body[data-theme="accessible"] {
+        --primary-color: #0080ff;
+        --secondary-color: #0066cc;
+        --accent-color: #ff8000;
+        --text-primary: #000000;
+        --text-secondary: #444444;
+        --text-muted: #666666;
+        --bg-primary: #ffffff;
+        --bg-card: #f8f9fa;
+        --border-color: #0080ff;
+        --shadow-color: rgba(0, 128, 255, 0.3);
+    }
+}
+
+/* Theme Button Icons */
+body[data-theme="dark"] .theme-toggle .theme-icon::before {
+    content: "🌙";
+}
+
+body[data-theme="light"] .theme-toggle .theme-icon::before {
+    content: "☀️";
+}
+
+body[data-theme="auto"] .theme-toggle .theme-icon::before {
+    content: "⚙️";
+}
+
+/* Reduced Motion Theme Support */
+@media (prefers-reduced-motion: reduce) {
+    body {
+        transition: none !important;
+    }
+    
+    .experience-card,
+    .skill-category,
+    .contact-item,
+    nav,
+    .theme-toggle,
+    .lang-toggle {
+        transition: none !important;
+    }
+}

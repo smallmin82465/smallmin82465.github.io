@@ -1,0 +1,426 @@
+/* Mobile First Responsive Design */
+
+/* Extra Small Devices (phones, 576px and down) */
+@media (max-width: 575.98px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero .description {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+    
+    section {
+        padding: 2rem 3%;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .controls {
+        top: 15px;
+        right: 15px;
+        gap: 8px;
+    }
+    
+    .theme-toggle,
+    .lang-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    nav {
+        padding: 0.8rem 3%;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem 0;
+    }
+    
+    nav a {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .experience-card,
+    .skill-category,
+    .contact-item {
+        padding: 1.5rem;
+    }
+    
+    .company-logo {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .job-title {
+        font-size: 1.1rem;
+    }
+    
+    .company-name {
+        font-size: 1rem;
+    }
+    
+    .tech-tags {
+        gap: 0.3rem;
+    }
+    
+    .tech-tag {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.8rem;
+    }
+    
+    .skill-icon {
+        font-size: 2.5rem;
+    }
+    
+    .contact-icon {
+        font-size: 2rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero .description {
+        font-size: 1rem;
+    }
+    
+    section {
+        padding: 3rem 4%;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .hero .description {
+        font-size: 1.1rem;
+    }
+    
+    section {
+        padding: 4rem 5%;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .experience-grid {
+        gap: 1.5rem;
+    }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .contact-info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Extra Large Devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .contact-info {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    section {
+        padding: 5rem 5%;
+        max-width: 1400px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .experience-card:hover,
+    .skill-category:hover,
+    .contact-item:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .experience-card:active,
+    .skill-category:active,
+    .contact-item:active {
+        transform: translateY(-2px);
+        transition: transform 0.1s ease;
+    }
+    
+    nav a:hover {
+        transform: none;
+    }
+    
+    nav a:active {
+        transform: translateY(-1px);
+        transition: transform 0.1s ease;
+    }
+    
+    .cta-button:hover {
+        transform: none;
+    }
+    
+    .cta-button:active {
+        transform: translateY(-2px);
+        transition: transform 0.1s ease;
+    }
+}
+
+/* Landscape Mobile Orientation */
+@media (max-width: 767.98px) and (orientation: landscape) {
+    .hero {
+        height: 100vh;
+        padding: 2rem 0;
+    }
+    
+    .hero-content {
+        padding: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero .description {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.4;
+    }
+    
+    section {
+        padding: 2rem 4%;
+    }
+    
+    nav {
+        padding: 0.5rem 4%;
+    }
+    
+    nav ul {
+        gap: 0.8rem;
+    }
+    
+    nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .company-logo,
+    .skill-icon,
+    .contact-icon {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .particles,
+    .cursor,
+    .cursor-follower,
+    .controls,
+    nav,
+    .progress-bar {
+        display: none !important;
+    }
+    
+    section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    .hero {
+        height: auto;
+        padding: 2rem 0;
+    }
+    
+    a {
+        color: black !important;
+        text-decoration: underline !important;
+    }
+    
+    .experience-card,
+    .skill-category,
+    .contact-item {
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        background: white !important;
+    }
+}
+
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+    .particles {
+        display: none;
+    }
+    
+    .typewriter {
+        animation: none;
+        border-right: none;
+        overflow: visible;
+        white-space: normal;
+    }
+    
+    .glitch {
+        animation: none;
+    }
+    
+    .pulse {
+        animation: none;
+    }
+    
+    * {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #ffffff;
+        --secondary-color: #ffffff;
+        --text-primary: #ffffff;
+        --text-secondary: #ffffff;
+        --border-color: #ffffff;
+    }
+    
+    body {
+        background: #000000 !important;
+    }
+    
+    .experience-card,
+    .skill-category,
+    .contact-item {
+        border: 2px solid #ffffff !important;
+        background: #000000 !important;
+    }
+}
+
+/* Dark Mode Preferences */
+@media (prefers-color-scheme: dark) {
+    body[data-theme="auto"] {
+        --bg-primary: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+        --text-primary: #ffffff;
+        --text-secondary: #b0b0b0;
+    }
+}
+
+/* Light Mode Preferences */
+@media (prefers-color-scheme: light) {
+    body[data-theme="auto"] {
+        --bg-primary: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+        --text-primary: #333333;
+        --text-secondary: #666666;
+    }
+}
+
+/* Focus Styles for Accessibility */
+@media (any-hover: none) {
+    button:focus,
+    a:focus {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
+    }
+}
+
+/* Large Text Support */
+@media (min-width: 1400px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1600px) {
+    html {
+        font-size: 20px;
+    }
+}
